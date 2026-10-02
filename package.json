@@ -1,0 +1,18 @@
+{
+  "name": "24ct-nguyendinhhoai-pizza-app",
+  "version": "1.0.0",
+  "description": "MERN Stack Online Pizza Ordering Web Application - 24CT_NguyenDinhHoai",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "start": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "client": "npm --prefix client run dev",
+    "server": "npm --prefix server run dev",
+    "seed": "npm --prefix server run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "docx": "^9.7.1"
+  },
+  "author": "Nguyen Dinh Hoai",
+  "license": "MIT"
+}

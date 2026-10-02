@@ -1,0 +1,632 @@
+{
+  "pizzas": [
+    {
+      "name": "Pizza Hải Sản Sốt Pesto Thượng Hạng",
+      "description": "Tôm sú tươi giòn, mực lá, ớt chuông đỏ quyện cùng xốt ngò tây Pesto xanh thơm lừng và lớp phô mai Mozzarella béo ngậy chảy sợi.",
+      "category": "seafood",
+      "price": 189000,
+      "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
+      "badge": "Bếp Trưởng Đề Xuất",
+      "rating": 4.9,
+      "spicyLevel": 1,
+      "sizes": [
+        {
+          "name": "Nhỏ (20cm)",
+          "extraPrice": 0
+        },
+        {
+          "name": "Vừa (25cm)",
+          "extraPrice": 40000
+        },
+        {
+          "name": "Lớn (30cm)",
+          "extraPrice": 85000
+        }
+      ],
+      "crusts": [
+        {
+          "name": "Đế mỏng giòn rụm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế dày truyền thống xốp mềm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế viền phô mai béo ngậy",
+          "extraPrice": 35000
+        },
+        {
+          "name": "Đế viền phô mai xúc xích",
+          "extraPrice": 45000
+        }
+      ],
+      "toppings": [
+        {
+          "name": "Thêm tôm sú tươi",
+          "price": 35000
+        },
+        {
+          "name": "Thêm phô mai Mozzarella dẻo",
+          "price": 25000
+        },
+        {
+          "name": "Thêm nấm mỡ tươi",
+          "price": 20000
+        },
+        {
+          "name": "Thêm ớt chuông ngọt",
+          "price": 15000
+        }
+      ],
+      "isAvailable": true,
+      "_id": "pizza_1788507633814_1",
+      "createdAt": "2026-09-04T07:40:33.814Z",
+      "updatedAt": "2026-09-04T07:40:33.815Z"
+    },
+    {
+      "name": "Pizza Pepperoni Mỹ Cổ Điển",
+      "description": "Vị cay nhẹ đặc trưng của xúc xích Pepperoni nhập khẩu hòa quyện sốt cà chua Ý truyền thống và ngập tràn phô mai Mozzarella vàng óng.",
+      "category": "classic",
+      "price": 159000,
+      "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80",
+      "badge": "Bán Chạy Nhất",
+      "rating": 4.8,
+      "spicyLevel": 1,
+      "sizes": [
+        {
+          "name": "Nhỏ (20cm)",
+          "extraPrice": 0
+        },
+        {
+          "name": "Vừa (25cm)",
+          "extraPrice": 40000
+        },
+        {
+          "name": "Lớn (30cm)",
+          "extraPrice": 80000
+        }
+      ],
+      "crusts": [
+        {
+          "name": "Đế mỏng giòn rụm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế dày truyền thống xốp mềm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế viền phô mai béo ngậy",
+          "extraPrice": 35000
+        },
+        {
+          "name": "Đế viền phô mai xúc xích",
+          "extraPrice": 45000
+        }
+      ],
+      "toppings": [
+        {
+          "name": "Thêm gấp đôi Pepperoni",
+          "price": 35000
+        },
+        {
+          "name": "Thêm phô mai Mozzarella dẻo",
+          "price": 25000
+        },
+        {
+          "name": "Thêm ớt Jalapeno cay nồng",
+          "price": 15000
+        }
+      ],
+      "isAvailable": true,
+      "_id": "pizza_1788507633815_2",
+      "createdAt": "2026-09-04T07:40:33.815Z",
+      "updatedAt": "2026-09-06T08:19:35.761Z"
+    },
+    {
+      "name": "Pizza Bò Nướng BBQ Phô Mai",
+      "description": "Thịt bò Úc băm ướp sốt BBQ đậm đà thơm mùi khói gỗ sồi, kết hợp cùng ngô ngọt, hành tây tím và phô mai nướng xém cạnh quyến rũ.",
+      "category": "meat",
+      "price": 179000,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+      "badge": "Món Mới",
+      "rating": 4.9,
+      "spicyLevel": 0,
+      "sizes": [
+        {
+          "name": "Nhỏ (20cm)",
+          "extraPrice": 0
+        },
+        {
+          "name": "Vừa (25cm)",
+          "extraPrice": 40000
+        },
+        {
+          "name": "Lớn (30cm)",
+          "extraPrice": 80000
+        }
+      ],
+      "crusts": [
+        {
+          "name": "Đế mỏng giòn rụm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế dày truyền thống xốp mềm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế viền phô mai béo ngậy",
+          "extraPrice": 35000
+        },
+        {
+          "name": "Đế viền phô mai xúc xích",
+          "extraPrice": 45000
+        }
+      ],
+      "toppings": [
+        {
+          "name": "Thêm thịt bò băm BBQ",
+          "price": 35000
+        },
+        {
+          "name": "Thêm thịt ba chỉ xông khói",
+          "price": 30000
+        },
+        {
+          "name": "Thêm phô mai Mozzarella dẻo",
+          "price": 25000
+        }
+      ],
+      "isAvailable": true,
+      "_id": "pizza_1788507633815_3",
+      "createdAt": "2026-09-04T07:40:33.815Z",
+      "updatedAt": "2026-09-04T07:40:33.815Z"
+    },
+    {
+      "name": "Pizza 4 Loại Phô Mai Hoàng Gia (Quattro Formaggi)",
+      "description": "Sự thăng hoa tuyệt đỉnh của 4 loại phô mai trứ danh: Mozzarella kéo sợi, Cheddar đậm đà, Parmesan thơm bùi và Blue Cheese đặc trưng của ẩm thực Ý.",
+      "category": "classic",
+      "price": 169000,
+      "image": "https://images.unsplash.com/photo-1573821663912-569905455b1c?auto=format&fit=crop&w=800&q=80",
+      "badge": "Phô Mai Gây Nghiện",
+      "rating": 4.7,
+      "spicyLevel": 0,
+      "sizes": [
+        {
+          "name": "Nhỏ (20cm)",
+          "extraPrice": 0
+        },
+        {
+          "name": "Vừa (25cm)",
+          "extraPrice": 40000
+        },
+        {
+          "name": "Lớn (30cm)",
+          "extraPrice": 80000
+        }
+      ],
+      "crusts": [
+        {
+          "name": "Đế mỏng giòn rụm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế dày truyền thống xốp mềm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế viền phô mai béo ngậy",
+          "extraPrice": 35000
+        }
+      ],
+      "toppings": [
+        {
+          "name": "Thêm mật ong hoa rừng rưới kèm",
+          "price": 15000
+        },
+        {
+          "name": "Thêm phô mai tươi Burrata",
+          "price": 45000
+        }
+      ],
+      "isAvailable": true,
+      "_id": "pizza_1788507633815_4",
+      "createdAt": "2026-09-04T07:40:33.815Z",
+      "updatedAt": "2026-09-04T07:40:33.815Z"
+    },
+    {
+      "name": "Pizza Gà Nướng Phô Mai Nấm Cay",
+      "description": "Thịt gà ức phi lê mềm ngọt kết hợp nấm mỡ xào tỏi, ớt chuông xanh, sốt tương ớt cay nhẹ và phô mai nung chảy trên đế bánh nướng củi.",
+      "category": "meat",
+      "price": 165000,
+      "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?auto=format&fit=crop&w=800&q=80",
+      "badge": "Cay Nồng Đậm Đà",
+      "rating": 4.8,
+      "spicyLevel": 2,
+      "sizes": [
+        {
+          "name": "Nhỏ (20cm)",
+          "extraPrice": 0
+        },
+        {
+          "name": "Vừa (25cm)",
+          "extraPrice": 40000
+        },
+        {
+          "name": "Lớn (30cm)",
+          "extraPrice": 80000
+        }
+      ],
+      "crusts": [
+        {
+          "name": "Đế mỏng giòn rụm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế dày truyền thống xốp mềm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế viền phô mai béo ngậy",
+          "extraPrice": 35000
+        }
+      ],
+      "toppings": [
+        {
+          "name": "Thêm thịt gà xé cay",
+          "price": 25000
+        },
+        {
+          "name": "Thêm nấm mỡ tươi",
+          "price": 20000
+        },
+        {
+          "name": "Thêm phô mai Mozzarella",
+          "price": 25000
+        }
+      ],
+      "isAvailable": true,
+      "_id": "pizza_1788507633815_5",
+      "createdAt": "2026-09-04T07:40:33.815Z",
+      "updatedAt": "2026-09-04T07:40:33.815Z"
+    },
+    {
+      "name": "Pizza Chay Nấm Hương & Rau Củ Tươi",
+      "description": "Lựa chọn thanh đạm giàu dinh dưỡng với nấm đùi gà, nấm mỡ, bông cải xanh, cà chua bi mọng nước, ô-liu đen cùng sốt cà chua thảo mộc.",
+      "category": "vegetarian",
+      "price": 149000,
+      "image": "https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?auto=format&fit=crop&w=800&q=80",
+      "badge": "Món Chay Thanh Lọc",
+      "rating": 4.6,
+      "spicyLevel": 0,
+      "sizes": [
+        {
+          "name": "Nhỏ (20cm)",
+          "extraPrice": 0
+        },
+        {
+          "name": "Vừa (25cm)",
+          "extraPrice": 35000
+        },
+        {
+          "name": "Lớn (30cm)",
+          "extraPrice": 70000
+        }
+      ],
+      "crusts": [
+        {
+          "name": "Đế mỏng giòn rụm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế ngũ cốc nguyên cám",
+          "extraPrice": 15000
+        },
+        {
+          "name": "Đế viền phô mai",
+          "extraPrice": 35000
+        }
+      ],
+      "toppings": [
+        {
+          "name": "Thêm hạt bắp ngọt",
+          "price": 10000
+        },
+        {
+          "name": "Thêm nấm mỡ tươi",
+          "price": 20000
+        },
+        {
+          "name": "Thêm quả ô-liu đen",
+          "price": 15000
+        }
+      ],
+      "isAvailable": true,
+      "_id": "pizza_1788507633815_6",
+      "createdAt": "2026-09-04T07:40:33.815Z",
+      "updatedAt": "2026-09-04T07:40:33.815Z"
+    },
+    {
+      "name": "Pizza Thập Cẩm Siêu Topping (Supreme)",
+      "description": "Bùng nổ hương vị với xúc xích Pepperoni, giăm bông heo xông khói, thịt bò bằm, nấm tươi, ớt chuông và ô liu đen phủ đầy mặt bánh.",
+      "category": "meat",
+      "price": 185000,
+      "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?auto=format&fit=crop&w=800&q=80",
+      "badge": "Bán Chạy Nhất",
+      "rating": 4.9,
+      "spicyLevel": 1,
+      "sizes": [
+        {
+          "name": "Nhỏ (20cm)",
+          "extraPrice": 0
+        },
+        {
+          "name": "Vừa (25cm)",
+          "extraPrice": 40000
+        },
+        {
+          "name": "Lớn (30cm)",
+          "extraPrice": 85000
+        }
+      ],
+      "crusts": [
+        {
+          "name": "Đế mỏng giòn rụm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế dày truyền thống xốp mềm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế viền xúc xích phô mai",
+          "extraPrice": 45000
+        }
+      ],
+      "toppings": [
+        {
+          "name": "Thêm xúc xích Pepperoni",
+          "price": 30000
+        },
+        {
+          "name": "Thêm thịt xông khói",
+          "price": 30000
+        },
+        {
+          "name": "Thêm phô mai Mozzarella dẻo",
+          "price": 25000
+        }
+      ],
+      "isAvailable": true,
+      "_id": "pizza_1788507633815_7",
+      "createdAt": "2026-09-04T07:40:33.815Z",
+      "updatedAt": "2026-09-04T07:40:33.815Z"
+    },
+    {
+      "name": "Pizza Hawaii Dứa Ngọt & Giăm Bông",
+      "description": "Sự phối hợp hài hòa giữa những miếng dứa tươi ngọt lịm vùng nhiệt đới và giăm bông thịt heo xông khói cắt lát dày, ăn hoài không ngán.",
+      "category": "classic",
+      "price": 155000,
+      "image": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80",
+      "badge": "Hương Vị Nhiệt Đới",
+      "rating": 4.7,
+      "spicyLevel": 0,
+      "sizes": [
+        {
+          "name": "Nhỏ (20cm)",
+          "extraPrice": 0
+        },
+        {
+          "name": "Vừa (25cm)",
+          "extraPrice": 40000
+        },
+        {
+          "name": "Lớn (30cm)",
+          "extraPrice": 80000
+        }
+      ],
+      "crusts": [
+        {
+          "name": "Đế mỏng giòn rụm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế dày truyền thống xốp mềm",
+          "extraPrice": 0
+        },
+        {
+          "name": "Đế viền phô mai béo ngậy",
+          "extraPrice": 35000
+        }
+      ],
+      "toppings": [
+        {
+          "name": "Thêm dứa tươi",
+          "price": 15000
+        },
+        {
+          "name": "Thêm giăm bông hun khói",
+          "price": 30000
+        },
+        {
+          "name": "Thêm phô mai kéo sợi",
+          "price": 25000
+        }
+      ],
+      "isAvailable": true,
+      "_id": "pizza_1788507633815_8",
+      "createdAt": "2026-09-04T07:40:33.815Z",
+      "updatedAt": "2026-09-04T07:40:33.815Z"
+    }
+  ],
+  "orders": [
+    {
+      "orderCode": "PIZZA-N875B",
+      "customer": {
+        "name": "hoài",
+        "phone": "0941246680",
+        "address": "đông hà",
+        "note": ""
+      },
+      "items": [
+        {
+          "pizzaId": "pizza_1788507633815_2",
+          "name": "Pizza Pepperoni Mỹ Cổ Điển",
+          "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80",
+          "size": {
+            "name": "Nhỏ (20cm)",
+            "extraPrice": 0
+          },
+          "crust": {
+            "name": "Đế mỏng giòn rụm",
+            "extraPrice": 0
+          },
+          "toppings": [],
+          "itemPrice": 159000,
+          "quantity": 1,
+          "totalItemPrice": 159000,
+          "specialInstructions": ""
+        }
+      ],
+      "subtotal": 159000,
+      "shippingFee": 20000,
+      "discount": 0,
+      "totalAmount": 179000,
+      "paymentMethod": "cod",
+      "paymentStatus": "unpaid",
+      "status": "cancelled",
+      "_id": "ord_1788684987338_4dul3",
+      "createdAt": "2026-09-06T08:56:27.338Z",
+      "updatedAt": "2026-09-06T08:57:50.869Z"
+    },
+    {
+      "orderCode": "PIZZA-5BZZL",
+      "customer": {
+        "name": "hoài",
+        "phone": "ádsad",
+        "address": "đá",
+        "note": "áda"
+      },
+      "items": [
+        {
+          "pizzaId": "pizza_1788507633814_1",
+          "name": "Pizza Hải Sản Sốt Pesto Thượng Hạng",
+          "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
+          "size": {
+            "name": "Lớn (30cm)",
+            "extraPrice": 85000
+          },
+          "crust": {
+            "name": "Đế mỏng giòn rụm",
+            "extraPrice": 0
+          },
+          "toppings": [],
+          "itemPrice": 274000,
+          "quantity": 1,
+          "totalItemPrice": 274000,
+          "specialInstructions": ""
+        }
+      ],
+      "subtotal": 274000,
+      "shippingFee": 20000,
+      "discount": 0,
+      "totalAmount": 294000,
+      "paymentMethod": "banking",
+      "paymentStatus": "paid",
+      "status": "completed",
+      "_id": "ord_1788510010117_osfg5",
+      "createdAt": "2026-09-04T08:20:10.117Z",
+      "updatedAt": "2026-09-04T08:20:34.582Z"
+    },
+    {
+      "orderCode": "PIZZA-AWJS6",
+      "customer": {
+        "name": "Nguyen Dinh Hoai",
+        "note": "Giao l�c c�n n�ng h?i",
+        "phone": "0901234567",
+        "address": "24 Du?ng CNTT, TP.HCM"
+      },
+      "items": [
+        {
+          "size": {
+            "name": "V?a (25cm)",
+            "extraPrice": 40000
+          },
+          "itemPrice": 304000,
+          "pizzaId": "pizza_1788508086121_dtlhr",
+          "name": "Pizza B? N?m Ph? Mai Thu?ng H?ng (D? S?a)",
+          "crust": {
+            "name": "D? vi?n ph� mai",
+            "extraPrice": 35000
+          },
+          "quantity": 1,
+          "toppings": [
+            {
+              "price": 20000,
+              "name": "Th�m n?m m?"
+            }
+          ],
+          "totalItemPrice": 304000
+        }
+      ],
+      "subtotal": 304000,
+      "shippingFee": 0,
+      "discount": 0,
+      "totalAmount": 304000,
+      "paymentMethod": "cod",
+      "paymentStatus": "unpaid",
+      "status": "completed",
+      "_id": "ord_1788508086140_81e1h",
+      "createdAt": "2026-09-04T07:48:06.140Z",
+      "updatedAt": "2026-09-04T08:20:40.231Z"
+    }
+  ],
+  "users": [
+    {
+      "_id": "user_1788684792660_ig6uo",
+      "name": "hoai",
+      "email": "hoainguyen@gmail.com",
+      "password": "$2b$10$ao/nqNxf8jjaKa0BbfOxNefdQ0zizRAbpp45uEkD90FV7xlMZ2Qte",
+      "phone": "0941246680",
+      "address": "đông hà",
+      "role": "customer",
+      "createdAt": "2026-09-06T08:53:12.660Z",
+      "updatedAt": "2026-09-06T08:53:12.660Z"
+    },
+    {
+      "_id": "user_1788684650160_owqfq",
+      "name": "hoài",
+      "email": "hoainguyen2ca3@gmail.com",
+      "password": "$2b$10$gNzXv.Dw2ibeg.yFaesdCO.1HvkGq6quvAkef54x78dSC4o6Y9SZG",
+      "phone": "0941246680",
+      "address": "đông hà",
+      "role": "customer",
+      "createdAt": "2026-09-06T08:50:50.160Z",
+      "updatedAt": "2026-09-06T08:50:50.160Z"
+    },
+    {
+      "_id": "user_admin_01",
+      "name": "Nguyễn Đình Hoài (Admin)",
+      "email": "admin@pizza.vn",
+      "password": "$2b$10$VBKn1vNXcIH.kWUII80I9.PS/.I5Yk/DxApTsrl7TSW64/VMmxWTu",
+      "phone": "0901234567",
+      "address": "Trụ sở Pizza 24CT, TP. Hồ Chí Minh",
+      "role": "admin",
+      "createdAt": "2026-09-06T08:22:43.144Z",
+      "updatedAt": "2026-09-06T08:22:43.145Z"
+    },
+    {
+      "_id": "user_customer_01",
+      "name": "Nguyễn Đình Hoài",
+      "email": "hoai@24ct.vn",
+      "password": "$2b$10$iYp4Y0s4Tm6Q.s472NP.Ee06FfGTXl1RxfLri2XFEDII18.tH5u5K",
+      "phone": "0987654321",
+      "address": "Số 24 Đường Đại Học, Linh Trung, TP. Thủ Đức",
+      "role": "customer",
+      "createdAt": "2026-09-06T08:22:43.210Z",
+      "updatedAt": "2026-09-06T08:22:43.210Z"
+    }
+  ]
+}
