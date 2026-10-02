@@ -41,9 +41,9 @@ export default function AdminDashboard({ onBackToMenu }) {
         api.getOrders(),
         api.getStats()
       ]);
-      setPizzas(pizzasRes.data || []);
-      setOrders(ordersRes.data || []);
-      setStats(statsRes.data || null);
+      setPizzas(pizzasRes.data?.data || []);
+      setOrders(ordersRes.data?.data || []);
+      setStats(statsRes.data?.data || null);
     } catch (err) {
       setErrorMsg(err.message || "Không thể tải dữ liệu từ máy chủ");
     } finally {

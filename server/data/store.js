@@ -49,13 +49,7 @@ const initDb = () => {
       const raw = fs.readFileSync(DB_FILE, "utf-8");
       data = JSON.parse(raw);
     } catch (err) {
-      console.error("Lỗi đọc file db.json, khởi tạo lại:", err);
-    }    $gitBin = 'E:\Git\cmd'
-    $userPath = [Environment]::GetEnvironmentVariable('Path', 'User')
-    if (-not ($userPath -split ';' | Where-Object { $_ -eq $gitBin })) {
-        [Environment]::SetEnvironmentVariable('Path', ($userPath.TrimEnd(';') + ';' + $gitBin), 'User')
-    }    git config --global user.name "NguyenDinhHoai"
-    git config --global user.email "hoainguyen2ca3@gmail.com"
+    }
   }
 
   let needSave = false;

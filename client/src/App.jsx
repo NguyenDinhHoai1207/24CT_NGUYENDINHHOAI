@@ -9,6 +9,7 @@ import OrderTracker from "./components/OrderTracker";
 import AdminDashboard from "./components/AdminDashboard";
 import AuthModal from "./components/AuthModal";
 import { api } from "./services/api";
+import { useAuth } from "./context/AuthContext";
 import { Search, Sparkles, Phone, Mail, MapPin, Heart, ArrowUp } from "lucide-react";
 
 const CATEGORIES = [
@@ -20,20 +21,13 @@ const CATEGORIES = [
 ];
 
 export default function App() {
-  const [currentView, setCurrentView] = useState("menu"); // "menu" | "admin"
+  const { user: currentUser, logout } = useAuth();
+  const [currentView, setCurrentView] = useState("menu");
   const [pizzas, setPizzas] = useState([]);
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [currentUser, setCurrentUser] = useState(() => {
-    try {
-      const savedUser = localStorage.getItem("pizza_user_24CT");
-      return savedUser ? JSON.parse(savedUser) : null;
-    } catch {
-      return null;
-    }
-  });
 
   // Modals state
   const [selectedPizza, setSelectedPizza] = useState(null);
@@ -51,7 +45,7 @@ export default function App() {
     setError("");
     try {
       const res = await api.getPizzas(activeCategory, searchQuery);
-      setPizzas(res.data || []);
+      setPizzas(res.data?.data || []);
     } catch (err) {
       console.error("Lỗi tải danh sách pizza:", err);
       setError("Không thể kết nối tới máy chủ backend. Vui lòng kiểm tra server đang chạy!");
@@ -80,15 +74,12 @@ export default function App() {
   };
 
   const handleAuthSuccess = (user) => {
-    setCurrentUser(user);
     setIsAuthOpen(false);
     if (user?.role === "admin") setCurrentView("admin");
   };
 
   const handleLogout = () => {
-    localStorage.removeItem("pizza_user_24CT");
-    localStorage.removeItem("pizza_token_24CT");
-    setCurrentUser(null);
+    logout();
     setCurrentView("menu");
   };
 

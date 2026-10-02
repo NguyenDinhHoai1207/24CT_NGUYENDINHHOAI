@@ -1,6 +1,19 @@
 {
   "pizzas": [
     {
+      "name": "Pizza hải sản",
+      "description": "ngon lắm",
+      "category": "classic",
+      "price": 169000,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
+      "badge": "Mới",
+      "isAvailable": true,
+      "spicyLevel": 1,
+      "_id": "pizza_1790910828444_9l4af",
+      "createdAt": "2026-10-02T03:13:48.444Z",
+      "updatedAt": "2026-10-02T03:13:48.444Z"
+    },
+    {
       "name": "Pizza Hải Sản Sốt Pesto Thượng Hạng",
       "description": "Tôm sú tươi giòn, mực lá, ớt chuông đỏ quyện cùng xốt ngò tây Pesto xanh thơm lừng và lớp phô mai Mozzarella béo ngậy chảy sợi.",
       "category": "seafood",
@@ -463,6 +476,45 @@
   ],
   "orders": [
     {
+      "orderCode": "PIZZA-JVG9R",
+      "customer": {
+        "name": "Nguyễn Đình Hoài",
+        "phone": "0987654321",
+        "address": "Số 24 Đường Đại Học, Linh Trung, TP. Thủ Đức",
+        "note": ""
+      },
+      "items": [
+        {
+          "pizzaId": "pizza_1788507633815_2",
+          "name": "Pizza Pepperoni Mỹ Cổ Điển",
+          "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80",
+          "size": {
+            "name": "Nhỏ (20cm)",
+            "extraPrice": 0
+          },
+          "crust": {
+            "name": "Đế mỏng giòn rụm",
+            "extraPrice": 0
+          },
+          "toppings": [],
+          "itemPrice": 159000,
+          "quantity": 1,
+          "totalItemPrice": 159000,
+          "specialInstructions": ""
+        }
+      ],
+      "subtotal": 159000,
+      "shippingFee": 20000,
+      "discount": 0,
+      "totalAmount": 179000,
+      "paymentMethod": "cod",
+      "paymentStatus": "unpaid",
+      "status": "pending",
+      "_id": "ord_1790910626251_yhpzc",
+      "createdAt": "2026-10-02T03:10:26.251Z",
+      "updatedAt": "2026-10-02T03:10:26.251Z"
+    },
+    {
       "orderCode": "PIZZA-N875B",
       "customer": {
         "name": "hoài",
@@ -584,6 +636,17 @@
     }
   ],
   "users": [
+    {
+      "_id": "user_1790910760344_19ua7",
+      "name": "hoài",
+      "email": "hoainguyen2ca33@gmail.com",
+      "password": "$2b$10$8r7WnZEF6sR9BF.EuL01xOZP3QzmBk.spGbckQDh7oQOdwl8OGR8K",
+      "phone": "0987654321",
+      "address": "111 đống đa",
+      "role": "customer",
+      "createdAt": "2026-10-02T03:12:40.344Z",
+      "updatedAt": "2026-10-02T03:12:40.344Z"
+    },
     {
       "_id": "user_1788684792660_ig6uo",
       "name": "hoai",
