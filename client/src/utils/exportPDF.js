@@ -38,7 +38,7 @@ export const exportUserProfilePDF = (user) => {
   let y = 65;
   const lineH = 10;
 
-  const roleLabel = user.role === "admin" ? "Quan tri vien (Admin)" : "Khach hang (Customer)";
+  const roleLabel = user.role === "admin" ? "Quan tri vien (Admin)" : (user.role === "staff" ? "Nhan vien (Staff)" : "Khach hang (Customer)");
 
   const createdDate = user.createdAt
     ? new Date(user.createdAt).toLocaleDateString("vi-VN")

@@ -7,74 +7,86 @@ export default function Navbar({ currentView, setCurrentView, onOpenTracking, us
   const { totalCount, setIsCartOpen } = useCart();
 
   return (
-    <header className="sticky top-0 z-40 bg-white border-b border-gray-200 shadow-sm">
-      {/* Top Banner */}
-      <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white text-xs font-semibold py-1.5 text-center">
-        🔥 Nhập mã <strong className="bg-white/20 px-1.5 py-0.5 rounded text-yellow-200">NGUYENDINHHOAI</strong> giảm 20% · Miễn phí giao hàng đơn từ 300.000đ
-      </div>
+    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
 
-      {/* Main bar */}
-      <div className="px-6 h-16 flex items-center gap-6">
-
-        {/* Logo */}
-        <button onClick={() => setCurrentView("menu")} className="flex items-center gap-2.5 shrink-0 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white shadow group-hover:scale-105 transition-transform">
-            <Pizza className="w-5 h-5" />
+        {/* Left: Brand */}
+        <div 
+          onClick={() => setCurrentView("menu")}
+          className="flex items-center gap-2.5 cursor-pointer shrink-0 select-none"
+        >
+          <div className="w-9 h-9 rounded-xl bg-orange-600 flex items-center justify-center text-white shadow-md shadow-orange-500/30">
+            <Pizza className="w-5 h-5 animate-pulse" />
           </div>
-          <div className="leading-none">
-            <p className="text-[9px] font-black uppercase tracking-widest text-orange-500">24CT · NguyenDinhHoai</p>
-            <p className="text-base font-black text-gray-900 tracking-tight">PIZZA <span className="text-orange-600">DELUXE</span></p>
+          <div className="leading-tight">
+            <span className="text-[10px] font-bold text-orange-600 tracking-wider uppercase block">
+              24CT • NGUYENDINHHOAI
+            </span>
+            <span className="text-lg font-black text-gray-900 tracking-tight block">
+              PIZZA DELUXE
+            </span>
           </div>
-        </button>
+        </div>
 
-        {/* Divider */}
-        <div className="h-8 w-px bg-gray-200 shrink-0 hidden md:block" />
-
-        {/* Nav links */}
-        <nav className="hidden md:flex items-center gap-1">
+        {/* Center-Left: Navigation buttons */}
+        <nav className="flex items-center gap-1.5 shrink-0">
           <button
             onClick={() => setCurrentView("menu")}
-            className={`px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors ${
-              currentView === "menu" ? "bg-orange-50 text-orange-600" : "text-gray-600 hover:text-orange-600 hover:bg-gray-50"
+            className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors ${
+              currentView === "menu" ? "bg-orange-50 text-orange-700" : "text-gray-600 hover:bg-gray-100"
             }`}
           >
-            Thực đơn
+            <span>Thực đơn</span>
           </button>
 
           <button
             onClick={onOpenTracking}
-            className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-gray-600 hover:text-orange-600 hover:bg-gray-50 transition-colors whitespace-nowrap"
+            className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold text-gray-600 hover:bg-gray-100 whitespace-nowrap transition-colors"
           >
-            <Clock className="w-4 h-4 shrink-0" />
-            Tra cứu đơn
+            <Clock className="w-4 h-4 shrink-0 text-gray-400" />
+            <span className="hidden sm:inline">Tra cứu đơn</span>
           </button>
 
-          <button
-            onClick={() => user?.role === "admin" ? setCurrentView("admin") : onOpenAuth("login")}
-            className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors ${
-              currentView === "admin" ? "bg-gray-900 text-white" : "text-gray-600 bg-gray-100 hover:bg-gray-200"
-            }`}
-          >
-            <ShieldCheck className="w-4 h-4 shrink-0 text-orange-400" />
-            Quản trị
-          </button>
+          {/* Quản trị (Admin / Staff) */}
+          {(user?.role === "admin" || user?.role === "staff") && (
+            <button
+              onClick={() => setCurrentView("admin")}
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap transition-colors ${
+                currentView === "admin" ? "bg-gray-900 text-white" : "text-gray-600 bg-gray-100 hover:bg-gray-200"
+              }`}
+            >
+              <ShieldCheck className="w-4 h-4 shrink-0 text-orange-400" />
+              <span>{user?.role === "admin" ? "Quản trị" : "Duyệt đơn"}</span>
+            </button>
+          )}
         </nav>
 
-        {/* Spacer */}
+        {/* Spacer đẩy các nút sang 2 bên */}
         <div className="flex-1" />
 
         {/* Right: Auth + Cart */}
         <div className="flex items-center gap-2 shrink-0">
           {user ? (
             <>
-              {/* User badge */}
+              {/* User badge kèm vai trò */}
               <div className="hidden sm:flex items-center gap-2 bg-gray-50 border border-gray-200 rounded-lg px-3 py-1.5">
-                <div className="w-7 h-7 rounded-full bg-orange-100 flex items-center justify-center">
-                  <User className="w-4 h-4 text-orange-600" />
+                <div className={`w-7 h-7 rounded-full flex items-center justify-center ${
+                  user.role === 'admin' ? 'bg-red-100 text-red-600' : (user.role === 'staff' ? 'bg-amber-100 text-amber-600' : 'bg-orange-100 text-orange-600')
+                }`}>
+                  <User className="w-4 h-4" />
                 </div>
                 <div className="leading-none">
-                  <p className="text-[10px] text-gray-400 uppercase tracking-wide">Xin chào</p>
-                  <p className="text-sm font-bold text-gray-800 max-w-[90px] truncate">{user.name}</p>
+                  <div className="flex items-center gap-1.5">
+                    <p className="text-[10px] text-gray-400 uppercase tracking-wide">Xin chào</p>
+                    <span className={`text-[9px] px-1.5 py-0.5 rounded font-black uppercase ${
+                      user.role === 'admin' 
+                        ? 'bg-red-500 text-white' 
+                        : (user.role === 'staff' ? 'bg-amber-500 text-white' : 'bg-blue-100 text-blue-700')
+                    }`}>
+                      {user.role === 'admin' ? 'Admin' : (user.role === 'staff' ? 'Nhân viên' : 'Khách')}
+                    </span>
+                  </div>
+                  <p className="text-sm font-bold text-gray-800 max-w-[110px] truncate mt-0.5">{user.name}</p>
                 </div>
               </div>
 
@@ -97,33 +109,33 @@ export default function Navbar({ currentView, setCurrentView, onOpenTracking, us
               </button>
             </>
           ) : (
-            <>
+            <div className="flex items-center gap-1.5">
               <button
                 onClick={() => onOpenAuth("login")}
-                className="flex items-center gap-1.5 border border-orange-300 text-orange-600 bg-orange-50 hover:bg-orange-100 px-3 py-2 rounded-lg text-sm font-bold transition-colors whitespace-nowrap"
+                className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold text-gray-700 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
               >
                 <LogIn className="w-4 h-4 shrink-0" />
-                Đăng nhập
+                <span className="hidden sm:inline">Đăng nhập</span>
               </button>
               <button
                 onClick={() => onOpenAuth("register")}
-                className="flex items-center gap-1.5 bg-gray-900 text-white hover:bg-gray-800 px-3 py-2 rounded-lg text-sm font-bold transition-colors whitespace-nowrap"
+                className="flex items-center gap-1.5 px-3 py-2 text-xs font-bold bg-orange-600 text-white hover:bg-orange-700 rounded-lg shadow-sm transition-colors whitespace-nowrap"
               >
                 <UserPlus className="w-4 h-4 shrink-0" />
-                Đăng ký
+                <span className="hidden sm:inline">Đăng ký</span>
               </button>
-            </>
+            </div>
           )}
 
-          {/* Cart */}
+          {/* Cart Button */}
           <button
             onClick={() => setIsCartOpen(true)}
-            className="relative flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2.5 rounded-xl font-bold shadow-md active:scale-95 transition-all whitespace-nowrap"
+            className="flex items-center gap-2 bg-orange-600 hover:bg-orange-700 active:scale-95 text-white font-bold px-3.5 py-2 rounded-xl shadow-md shadow-orange-500/20 transition-all shrink-0"
           >
             <ShoppingBag className="w-5 h-5 shrink-0" />
-            <span className="hidden sm:inline">Giỏ hàng</span>
+            <span className="text-sm font-extrabold hidden sm:inline">Giỏ hàng</span>
             {totalCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-black w-5 h-5 rounded-full flex items-center justify-center shadow">
+              <span className="bg-white text-orange-600 text-xs font-black px-1.5 py-0.5 rounded-full">
                 {totalCount}
               </span>
             )}
