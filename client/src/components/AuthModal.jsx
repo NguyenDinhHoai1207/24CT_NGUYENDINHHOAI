@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Mail, Lock, User, Phone, MapPin } from 'lucide-react';
+import { X, Mail, Lock, User, Phone, MapPin, CheckCircle } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { login as loginApi, register as registerApi } from '../services/api';
 
@@ -10,12 +10,15 @@ export default function AuthModal({ isOpen, defaultMode, onClose, onAuthSuccess 
   });
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  
+  const [registerSuccess, setRegisterSuccess] = useState(false); // Trạng thái đăng ký thành công
+
   const { login } = useAuth();
 
   React.useEffect(() => {
     setIsLogin(defaultMode !== 'register');
     setError('');
+    setRegisterSuccess(false);
+    setFormData({ name: '', email: '', password: '', phone: '', address: '' });
   }, [defaultMode, isOpen]);
 
   if (!isOpen) return null;
@@ -31,6 +34,7 @@ export default function AuthModal({ isOpen, defaultMode, onClose, onAuthSuccess 
 
     try {
       if (isLogin) {
+        // Đăng nhập -> tự động vào
         const res = await loginApi({ email: formData.email, password: formData.password });
         if (res.data.success) {
           login(res.data.data, res.data.data.token);
@@ -38,11 +42,10 @@ export default function AuthModal({ isOpen, defaultMode, onClose, onAuthSuccess 
           onClose();
         }
       } else {
+        // Đăng ký -> chỉ báo thành công, KHÔNG tự đăng nhập
         const res = await registerApi(formData);
         if (res.data.success) {
-          login(res.data.data, res.data.data.token);
-          if (onAuthSuccess) onAuthSuccess(res.data.data);
-          onClose();
+          setRegisterSuccess(true); // Hiện màn hình thông báo thành công
         }
       }
     } catch (err) {
@@ -52,10 +55,51 @@ export default function AuthModal({ isOpen, defaultMode, onClose, onAuthSuccess 
     }
   };
 
+  // --------- Màn hình đăng ký thành công ---------
+  if (registerSuccess) {
+    return (
+      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+        <div className="bg-white rounded-xl shadow-xl w-full max-w-md overflow-hidden relative">
+          <button
+            onClick={() => { setRegisterSuccess(false); onClose(); }}
+            className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors z-10"
+          >
+            <X size={20} />
+          </button>
+
+          <div className="p-8 text-center">
+            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <CheckCircle className="w-10 h-10 text-green-500" />
+            </div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Đăng ký thành công!</h2>
+            <p className="text-gray-500 text-sm mb-2">
+              Tài khoản của bạn đã được tạo.
+            </p>
+            <p className="text-gray-700 font-semibold text-sm mb-6">
+              Vui lòng đăng nhập để tiếp tục sử dụng dịch vụ.
+            </p>
+
+            <button
+              onClick={() => {
+                setRegisterSuccess(false);
+                setIsLogin(true);
+                setFormData({ name: '', email: '', password: '', phone: '', address: '' });
+              }}
+              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition-colors shadow-sm"
+            >
+              Đi tới trang Đăng Nhập
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // --------- Form Đăng nhập / Đăng ký ---------
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl shadow-xl w-full max-w-md overflow-hidden relative animate-in fade-in zoom-in duration-200">
-        <button 
+      <div className="bg-white rounded-xl shadow-xl w-full max-w-md overflow-hidden relative">
+        <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors z-10"
         >
@@ -152,7 +196,7 @@ export default function AuthModal({ isOpen, defaultMode, onClose, onAuthSuccess 
 
           <div className="mt-6 text-center text-sm text-gray-500">
             {isLogin ? "Chưa có tài khoản? " : "Đã có tài khoản? "}
-            <button 
+            <button
               onClick={() => { setIsLogin(!isLogin); setError(''); }}
               className="text-orange-500 hover:text-orange-600 font-medium hover:underline"
             >

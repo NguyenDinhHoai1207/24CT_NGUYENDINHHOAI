@@ -1,19 +1,6 @@
 {
   "pizzas": [
     {
-      "name": "Pizza hải sản",
-      "description": "ngon lắm",
-      "category": "classic",
-      "price": 169000,
-      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80",
-      "badge": "Mới",
-      "isAvailable": true,
-      "spicyLevel": 1,
-      "_id": "pizza_1790910828444_9l4af",
-      "createdAt": "2026-10-02T03:13:48.444Z",
-      "updatedAt": "2026-10-02T03:13:48.444Z"
-    },
-    {
       "name": "Pizza Hải Sản Sốt Pesto Thượng Hạng",
       "description": "Tôm sú tươi giòn, mực lá, ớt chuông đỏ quyện cùng xốt ngò tây Pesto xanh thơm lừng và lớp phô mai Mozzarella béo ngậy chảy sợi.",
       "category": "seafood",
@@ -73,9 +60,9 @@
         }
       ],
       "isAvailable": true,
-      "_id": "pizza_1788507633814_1",
-      "createdAt": "2026-09-04T07:40:33.814Z",
-      "updatedAt": "2026-09-04T07:40:33.815Z"
+      "_id": "pizza_1793928717268_1",
+      "createdAt": "2026-11-06T01:31:57.268Z",
+      "updatedAt": "2026-11-06T01:31:57.268Z"
     },
     {
       "name": "Pizza Pepperoni Mỹ Cổ Điển",
@@ -133,9 +120,9 @@
         }
       ],
       "isAvailable": true,
-      "_id": "pizza_1788507633815_2",
-      "createdAt": "2026-09-04T07:40:33.815Z",
-      "updatedAt": "2026-09-06T08:19:35.761Z"
+      "_id": "pizza_1793928717268_2",
+      "createdAt": "2026-11-06T01:31:57.268Z",
+      "updatedAt": "2026-11-06T01:31:57.268Z"
     },
     {
       "name": "Pizza Bò Nướng BBQ Phô Mai",
@@ -193,9 +180,9 @@
         }
       ],
       "isAvailable": true,
-      "_id": "pizza_1788507633815_3",
-      "createdAt": "2026-09-04T07:40:33.815Z",
-      "updatedAt": "2026-09-04T07:40:33.815Z"
+      "_id": "pizza_1793928717268_3",
+      "createdAt": "2026-11-06T01:31:57.268Z",
+      "updatedAt": "2026-11-06T01:31:57.268Z"
     },
     {
       "name": "Pizza 4 Loại Phô Mai Hoàng Gia (Quattro Formaggi)",
@@ -245,9 +232,9 @@
         }
       ],
       "isAvailable": true,
-      "_id": "pizza_1788507633815_4",
-      "createdAt": "2026-09-04T07:40:33.815Z",
-      "updatedAt": "2026-09-04T07:40:33.815Z"
+      "_id": "pizza_1793928717268_4",
+      "createdAt": "2026-11-06T01:31:57.268Z",
+      "updatedAt": "2026-11-06T01:31:57.268Z"
     },
     {
       "name": "Pizza Gà Nướng Phô Mai Nấm Cay",
@@ -301,9 +288,9 @@
         }
       ],
       "isAvailable": true,
-      "_id": "pizza_1788507633815_5",
-      "createdAt": "2026-09-04T07:40:33.815Z",
-      "updatedAt": "2026-09-04T07:40:33.815Z"
+      "_id": "pizza_1793928717268_5",
+      "createdAt": "2026-11-06T01:31:57.268Z",
+      "updatedAt": "2026-11-06T01:31:57.268Z"
     },
     {
       "name": "Pizza Chay Nấm Hương & Rau Củ Tươi",
@@ -357,9 +344,9 @@
         }
       ],
       "isAvailable": true,
-      "_id": "pizza_1788507633815_6",
-      "createdAt": "2026-09-04T07:40:33.815Z",
-      "updatedAt": "2026-09-04T07:40:33.815Z"
+      "_id": "pizza_1793928717268_6",
+      "createdAt": "2026-11-06T01:31:57.268Z",
+      "updatedAt": "2026-11-06T01:31:57.268Z"
     },
     {
       "name": "Pizza Thập Cẩm Siêu Topping (Supreme)",
@@ -413,9 +400,9 @@
         }
       ],
       "isAvailable": true,
-      "_id": "pizza_1788507633815_7",
-      "createdAt": "2026-09-04T07:40:33.815Z",
-      "updatedAt": "2026-09-04T07:40:33.815Z"
+      "_id": "pizza_1793928717268_7",
+      "createdAt": "2026-11-06T01:31:57.268Z",
+      "updatedAt": "2026-11-06T01:31:57.268Z"
     },
     {
       "name": "Pizza Hawaii Dứa Ngọt & Giăm Bông",
@@ -469,227 +456,161 @@
         }
       ],
       "isAvailable": true,
-      "_id": "pizza_1788507633815_8",
-      "createdAt": "2026-09-04T07:40:33.815Z",
-      "updatedAt": "2026-09-04T07:40:33.815Z"
+      "_id": "pizza_1793928717268_8",
+      "createdAt": "2026-11-06T01:31:57.268Z",
+      "updatedAt": "2026-11-06T01:31:57.268Z"
     }
   ],
   "orders": [
     {
-      "orderCode": "PIZZA-JVG9R",
+      "_id": "ord_01",
+      "orderCode": "PIZZA-HD01",
       "customer": {
         "name": "Nguyễn Đình Hoài",
-        "phone": "0987654321",
-        "address": "Số 24 Đường Đại Học, Linh Trung, TP. Thủ Đức",
-        "note": ""
-      },
-      "items": [
-        {
-          "pizzaId": "pizza_1788507633815_2",
-          "name": "Pizza Pepperoni Mỹ Cổ Điển",
-          "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80",
-          "size": {
-            "name": "Nhỏ (20cm)",
-            "extraPrice": 0
-          },
-          "crust": {
-            "name": "Đế mỏng giòn rụm",
-            "extraPrice": 0
-          },
-          "toppings": [],
-          "itemPrice": 159000,
-          "quantity": 1,
-          "totalItemPrice": 159000,
-          "specialInstructions": ""
-        }
-      ],
-      "subtotal": 159000,
-      "shippingFee": 20000,
-      "discount": 0,
-      "totalAmount": 179000,
-      "paymentMethod": "cod",
-      "paymentStatus": "unpaid",
-      "status": "pending",
-      "_id": "ord_1790910626251_yhpzc",
-      "createdAt": "2026-10-02T03:10:26.251Z",
-      "updatedAt": "2026-10-02T03:10:26.251Z"
-    },
-    {
-      "orderCode": "PIZZA-N875B",
-      "customer": {
-        "name": "hoài",
         "phone": "0941246680",
-        "address": "đông hà",
-        "note": ""
+        "address": "246 NÚT THÀNH"
       },
       "items": [
         {
-          "pizzaId": "pizza_1788507633815_2",
-          "name": "Pizza Pepperoni Mỹ Cổ Điển",
-          "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=800&q=80",
-          "size": {
-            "name": "Nhỏ (20cm)",
-            "extraPrice": 0
-          },
-          "crust": {
-            "name": "Đế mỏng giòn rụm",
-            "extraPrice": 0
-          },
-          "toppings": [],
-          "itemPrice": 159000,
-          "quantity": 1,
-          "totalItemPrice": 159000,
-          "specialInstructions": ""
-        }
-      ],
-      "subtotal": 159000,
-      "shippingFee": 20000,
-      "discount": 0,
-      "totalAmount": 179000,
-      "paymentMethod": "cod",
-      "paymentStatus": "unpaid",
-      "status": "cancelled",
-      "_id": "ord_1788684987338_4dul3",
-      "createdAt": "2026-09-06T08:56:27.338Z",
-      "updatedAt": "2026-09-06T08:57:50.869Z"
-    },
-    {
-      "orderCode": "PIZZA-5BZZL",
-      "customer": {
-        "name": "hoài",
-        "phone": "ádsad",
-        "address": "đá",
-        "note": "áda"
-      },
-      "items": [
-        {
-          "pizzaId": "pizza_1788507633814_1",
           "name": "Pizza Hải Sản Sốt Pesto Thượng Hạng",
-          "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
-          "size": {
-            "name": "Lớn (30cm)",
-            "extraPrice": 85000
-          },
-          "crust": {
-            "name": "Đế mỏng giòn rụm",
-            "extraPrice": 0
-          },
-          "toppings": [],
-          "itemPrice": 274000,
-          "quantity": 1,
-          "totalItemPrice": 274000,
-          "specialInstructions": ""
+          "size": "M",
+          "price": 219000,
+          "quantity": 1
         }
       ],
-      "subtotal": 274000,
-      "shippingFee": 20000,
-      "discount": 0,
-      "totalAmount": 294000,
+      "totalAmount": 239000,
       "paymentMethod": "banking",
       "paymentStatus": "paid",
       "status": "completed",
-      "_id": "ord_1788510010117_osfg5",
-      "createdAt": "2026-09-04T08:20:10.117Z",
-      "updatedAt": "2026-09-04T08:20:34.582Z"
+      "createdAt": "2026-11-06T08:15:00.000+07:00",
+      "createdAtVN": "2026-11-06T08:15:00.000+07:00",
+      "ngayGioDangKy": "2026-11-06 08:15:00 (Giờ VN)"
     },
     {
-      "orderCode": "PIZZA-AWJS6",
+      "_id": "ord_02",
+      "orderCode": "PIZZA-HD02",
       "customer": {
-        "name": "Nguyen Dinh Hoai",
-        "note": "Giao l�c c�n n�ng h?i",
-        "phone": "0901234567",
-        "address": "24 Du?ng CNTT, TP.HCM"
+        "name": "Lê Tấn Phát",
+        "phone": "0976333444",
+        "address": "33 Hùng Vương"
       },
       "items": [
         {
-          "size": {
-            "name": "V?a (25cm)",
-            "extraPrice": 40000
-          },
-          "itemPrice": 304000,
-          "pizzaId": "pizza_1788508086121_dtlhr",
-          "name": "Pizza B? N?m Ph? Mai Thu?ng H?ng (D? S?a)",
-          "crust": {
-            "name": "D? vi?n ph� mai",
-            "extraPrice": 35000
-          },
-          "quantity": 1,
-          "toppings": [
-            {
-              "price": 20000,
-              "name": "Th�m n?m m?"
-            }
-          ],
-          "totalItemPrice": 304000
+          "name": "Pizza Bò Nướng BBQ Phô Mai",
+          "size": "L",
+          "price": 229000,
+          "quantity": 1
+        },
+        {
+          "name": "Pizza Pepperoni Mỹ Cổ Điển",
+          "size": "S",
+          "price": 159000,
+          "quantity": 1
         }
       ],
-      "subtotal": 304000,
-      "shippingFee": 0,
-      "discount": 0,
-      "totalAmount": 304000,
+      "totalAmount": 408000,
+      "paymentMethod": "cod",
+      "paymentStatus": "paid",
+      "status": "completed",
+      "createdAt": "2026-11-06T08:48:00.000+07:00",
+      "createdAtVN": "2026-11-06T08:48:00.000+07:00",
+      "ngayGioDangKy": "2026-11-06 08:48:00 (Giờ VN)"
+    },
+    {
+      "_id": "ord_03",
+      "orderCode": "PIZZA-HD03",
+      "customer": {
+        "name": "Lê Đình Lý",
+        "phone": "0932444999",
+        "address": "12 Nại Nam"
+      },
+      "items": [
+        {
+          "name": "Pizza 4 Loại Phô Mai Hoàng Gia",
+          "size": "M",
+          "price": 199000,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 219000,
+      "paymentMethod": "cod",
+      "paymentStatus": "paid",
+      "status": "completed",
+      "createdAt": "2026-11-06T08:50:00.000+07:00",
+      "createdAtVN": "2026-11-06T08:50:00.000+07:00",
+      "ngayGioDangKy": "2026-11-06 08:50:00 (Giờ VN)"
+    },
+    {
+      "_id": "ord_04",
+      "orderCode": "PIZZA-HD04",
+      "customer": {
+        "name": "Nguyễn Đình Hoài",
+        "phone": "0987654321",
+        "address": "Đại Học CNTT"
+      },
+      "items": [
+        {
+          "name": "Pizza Gà Nướng Phô Mai Nấm Cay",
+          "size": "M",
+          "price": 195000,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 410000,
+      "paymentMethod": "banking",
+      "paymentStatus": "paid",
+      "status": "completed",
+      "createdAt": "2026-11-06T09:10:00.000+07:00",
+      "createdAtVN": "2026-11-06T09:10:00.000+07:00",
+      "ngayGioDangKy": "2026-11-06 09:10:00 (Giờ VN)"
+    },
+    {
+      "_id": "ord_05",
+      "orderCode": "PIZZA-HD05",
+      "customer": {
+        "name": "Trần Thị Mai",
+        "phone": "0912345678",
+        "address": "15 Quang Trung"
+      },
+      "items": [
+        {
+          "name": "Pizza Rau Củ Chay",
+          "size": "S",
+          "price": 149000,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 169000,
       "paymentMethod": "cod",
       "paymentStatus": "unpaid",
-      "status": "completed",
-      "_id": "ord_1788508086140_81e1h",
-      "createdAt": "2026-09-04T07:48:06.140Z",
-      "updatedAt": "2026-09-04T08:20:40.231Z"
+      "status": "delivering",
+      "createdAt": "2026-11-13T08:00:00.000+07:00",
+      "createdAtVN": "2026-11-13T08:00:00.000+07:00",
+      "ngayGioDangKy": "2026-11-13 08:00:00 (Giờ VN)"
     }
   ],
   "users": [
     {
-      "_id": "user_1790910760344_19ua7",
-      "name": "hoài",
-      "email": "hoainguyen2ca33@gmail.com",
-      "password": "$2b$10$8r7WnZEF6sR9BF.EuL01xOZP3QzmBk.spGbckQDh7oQOdwl8OGR8K",
-      "phone": "0987654321",
-      "address": "111 đống đa",
-      "role": "customer",
-      "createdAt": "2026-10-02T03:12:40.344Z",
-      "updatedAt": "2026-10-02T03:12:40.344Z"
-    },
-    {
-      "_id": "user_1788684792660_ig6uo",
-      "name": "hoai",
-      "email": "hoainguyen@gmail.com",
-      "password": "$2b$10$ao/nqNxf8jjaKa0BbfOxNefdQ0zizRAbpp45uEkD90FV7xlMZ2Qte",
-      "phone": "0941246680",
-      "address": "đông hà",
-      "role": "customer",
-      "createdAt": "2026-09-06T08:53:12.660Z",
-      "updatedAt": "2026-09-06T08:53:12.660Z"
-    },
-    {
-      "_id": "user_1788684650160_owqfq",
-      "name": "hoài",
-      "email": "hoainguyen2ca3@gmail.com",
-      "password": "$2b$10$gNzXv.Dw2ibeg.yFaesdCO.1HvkGq6quvAkef54x78dSC4o6Y9SZG",
-      "phone": "0941246680",
-      "address": "đông hà",
-      "role": "customer",
-      "createdAt": "2026-09-06T08:50:50.160Z",
-      "updatedAt": "2026-09-06T08:50:50.160Z"
-    },
-    {
       "_id": "user_admin_01",
       "name": "Nguyễn Đình Hoài (Admin)",
       "email": "admin@pizza.vn",
-      "password": "$2b$10$VBKn1vNXcIH.kWUII80I9.PS/.I5Yk/DxApTsrl7TSW64/VMmxWTu",
+      "password": "$2b$10$TT3bSoS7hFYJ69wa4DtOjeTzpLIAYVI7QagrILuY08UTmi5Ea71NW",
       "phone": "0901234567",
       "address": "Trụ sở Pizza 24CT, TP. Hồ Chí Minh",
       "role": "admin",
-      "createdAt": "2026-09-06T08:22:43.144Z",
-      "updatedAt": "2026-09-06T08:22:43.145Z"
+      "createdAt": "2026-11-06T08:33:28.796+07:00",
+      "updatedAt": "2026-11-06T08:33:28.796+07:00"
     },
     {
       "_id": "user_customer_01",
       "name": "Nguyễn Đình Hoài",
       "email": "hoai@24ct.vn",
-      "password": "$2b$10$iYp4Y0s4Tm6Q.s472NP.Ee06FfGTXl1RxfLri2XFEDII18.tH5u5K",
+      "password": "$2b$10$eHfNTfUJZHrPeQyAdTeM1uTtlR8Tr0/299VnpfwiVp9rgP2rHfij6",
       "phone": "0987654321",
       "address": "Số 24 Đường Đại Học, Linh Trung, TP. Thủ Đức",
       "role": "customer",
-      "createdAt": "2026-09-06T08:22:43.210Z",
-      "updatedAt": "2026-09-06T08:22:43.210Z"
+      "createdAt": "2026-11-06T08:33:28.860+07:00",
+      "updatedAt": "2026-11-06T08:33:28.860+07:00"
     }
   ]
 }

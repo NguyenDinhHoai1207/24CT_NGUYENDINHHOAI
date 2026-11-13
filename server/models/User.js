@@ -1,6 +1,21 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
+// Lay thoi gian chuan gio Viet Nam (GMT+7)
+const getVietnamDate = () => {
+  return new Date(Date.now() + 7 * 60 * 60 * 1000);
+};
+
+const getVietnamTimeISO = () => {
+  const vnTime = getVietnamDate();
+  return vnTime.toISOString().replace("Z", "+07:00");
+};
+
+const getVietnamTimeText = () => {
+  const vnTime = getVietnamDate();
+  return vnTime.toISOString().replace("T", " ").substring(0, 19) + " (Giờ VN)";
+};
+
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -12,11 +27,7 @@ const userSchema = new mongoose.Schema({
     required: [true, "Vui lòng nhập địa chỉ email"],
     unique: true,
     lowercase: true,
-    trim: true,
-    match: [
-      /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-      "Vui lòng cung cấp địa chỉ email hợp lệ"
-    ]
+    trim: true
   },
   password: {
     type: String,
@@ -35,22 +46,36 @@ const userSchema = new mongoose.Schema({
     type: String,
     enum: ["customer", "admin"],
     default: "customer"
+  },
+  createdAt: {
+    type: Date,
+    default: getVietnamDate
+  },
+  updatedAt: {
+    type: Date,
+    default: getVietnamDate
+  },
+  createdAtVN: {
+    type: String,
+    default: getVietnamTimeISO
+  },
+  ngayGioDangKy: {
+    type: String,
+    default: getVietnamTimeText
   }
 }, {
-  timestamps: true
+  timestamps: false // Dung createdAt va updatedAt tuy bien theo gio Viet Nam
 });
 
-// Mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu
 userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) {
-    return next();
+  if (this.isModified("password")) {
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
   }
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
+  this.updatedAt = getVietnamDate();
   next();
 });
 
-// So khớp mật khẩu đăng nhập
 userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };

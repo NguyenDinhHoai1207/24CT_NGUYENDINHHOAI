@@ -74,7 +74,7 @@ export const getOrders = async (req, res) => {
   }
 };
 
-// @desc    Lấy chi tiết đơn hàng theo orderCode hoặc ID (Dành cho khách tra cứu)
+// @desc    Lấy chi tiết đơn hàng theo orderCode hoặc ID
 // @route   GET /api/orders/:id
 export const getOrderById = async (req, res) => {
   try {
@@ -144,9 +144,8 @@ export const getOrderStats = async (req, res) => {
     }
 
     const totalOrders = orders.length;
-    const totalRevenue = orders
-      .filter(o => o.status === "completed")
-      .reduce((sum, o) => sum + (o.totalAmount || 0), 0);
+    // Tổng doanh thu toàn bộ hệ thống
+    const totalRevenue = orders.reduce((sum, o) => sum + (o.totalAmount || 0), 0);
     const activeOrders = orders.filter(o => ["pending", "preparing", "baking", "delivering"].includes(o.status)).length;
     const completedOrders = orders.filter(o => o.status === "completed").length;
 

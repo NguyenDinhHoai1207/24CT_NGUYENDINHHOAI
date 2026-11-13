@@ -8,6 +8,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const DB_FILE = path.join(__dirname, "db.json");
 
+// Helper tao moc thoi gian chuan mui gio Viet Nam (GMT+7)
+const getVietnamTimeISO = () => {
+  const now = new Date();
+  const vnTime = new Date(now.getTime() + 7 * 60 * 60 * 1000);
+  return vnTime.toISOString().replace("Z", "+07:00");
+};
+
+
 // Helper to hash password synchronously for initial seed
 const getHashedPass = (password) => {
   const salt = bcrypt.genSaltSync(10);
@@ -24,8 +32,8 @@ const defaultUsers = [
     phone: "0901234567",
     address: "Trụ sở Pizza 24CT, TP. Hồ Chí Minh",
     role: "admin",
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
+    createdAt: getVietnamTimeISO(),
+    updatedAt: getVietnamTimeISO()
   },
   {
     _id: "user_customer_01",
@@ -35,8 +43,8 @@ const defaultUsers = [
     phone: "0987654321",
     address: "Số 24 Đường Đại Học, Linh Trung, TP. Thủ Đức",
     role: "customer",
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
+    createdAt: getVietnamTimeISO(),
+    updatedAt: getVietnamTimeISO()
   }
 ];
 
@@ -58,8 +66,8 @@ const initDb = () => {
     data.pizzas = samplePizzas.map((p, idx) => ({
       ...p,
       _id: `pizza_${Date.now()}_${idx + 1}`,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      createdAt: getVietnamTimeISO(),
+      updatedAt: getVietnamTimeISO()
     }));
     needSave = true;
   }
@@ -115,8 +123,8 @@ export const Store = {
     const newPizza = {
       ...pizzaData,
       _id: `pizza_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      createdAt: getVietnamTimeISO(),
+      updatedAt: getVietnamTimeISO()
     };
     data.pizzas.unshift(newPizza);
     saveStoreData(data);
@@ -130,7 +138,7 @@ export const Store = {
     data.pizzas[index] = {
       ...data.pizzas[index],
       ...updateData,
-      updatedAt: new Date().toISOString()
+      updatedAt: getVietnamTimeISO()
     };
     saveStoreData(data);
     return data.pizzas[index];
@@ -161,8 +169,8 @@ export const Store = {
     const newOrder = {
       ...orderData,
       _id: `ord_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      createdAt: getVietnamTimeISO(),
+      updatedAt: getVietnamTimeISO()
     };
     data.orders.unshift(newOrder);
     saveStoreData(data);
@@ -174,7 +182,7 @@ export const Store = {
     const order = data.orders.find(o => o._id.toString() === id.toString() || o.orderCode === id);
     if (!order) return null;
     order.status = status;
-    order.updatedAt = new Date().toISOString();
+    order.updatedAt = getVietnamTimeISO();
     saveStoreData(data);
     return order;
   },
@@ -204,8 +212,8 @@ export const Store = {
       phone: userData.phone || "",
       address: userData.address || "",
       role: userData.role || "customer",
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString()
+      createdAt: getVietnamTimeISO(),
+      updatedAt: getVietnamTimeISO()
     };
 
     data.users.unshift(newUser);

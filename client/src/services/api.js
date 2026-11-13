@@ -31,7 +31,8 @@ export const api = {
   createPizza: async (data) => axiosInstance.post('/pizzas', data),
   updatePizza: async (id, data) => axiosInstance.put(`/pizzas/${id}`, data),
   deletePizza: async (id) => axiosInstance.delete(`/pizzas/${id}`),
-  updateOrderStatus: async (id, status) => axiosInstance.put(`/orders/${id}/status`, { status })
+  updateOrderStatus: async (id, status) => axiosInstance.patch(`/orders/${id}/status`, { status }),
+  getStats: async () => axiosInstance.get('/orders/stats/summary')
 };
 
 export default axiosInstance;

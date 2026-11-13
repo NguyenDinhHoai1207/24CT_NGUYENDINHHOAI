@@ -7,7 +7,8 @@
     "start": "concurrently \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
     "client": "npm --prefix client run dev",
     "server": "npm --prefix server run dev",
-    "seed": "npm --prefix server run seed"
+    "seed": "npm --prefix server run seed",
+    "check-db": "node server/check-db.js"
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
